@@ -16,8 +16,9 @@ return new class extends Migration
             $table->string('name');
             $table->longText('description');
             $table->integer('quantity');
-            $table->boolean('ordered');
-            $table->boolean('shipped');
+            $table->string('position');
+            $table->boolean('ordered')->default(false);
+            $table->boolean('shipped')->default(false);
             $table->timestamps();
         });
     }

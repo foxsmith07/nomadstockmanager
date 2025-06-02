@@ -1,4 +1,4 @@
-<div class="navbar bg-white shadow-xl mb-5 px-7 fixed">
+<div class="navbar bg-white shadow-xl px-4 sticky top-0 z-50">
     <div class="navbar-start">
         <div class="dropdown">
             <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -29,20 +29,34 @@
         </a>
     </div>
     <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
+        <ul class="menu menu-horizontal px-1 text-slate-600">
             <li>
-                <a href="{{route('dashboard')}}">Dashboard</a>
+                <a href="{{route('dashboard')}}">
+                    <i class="fa-solid fa-house"></i>
+                    Dashboard
+                </a>
             </li>
             <li>
-                <a href="{{route('stock.index')}}">Stock</a>
+                <a href="{{route('stock.index')}}">
+                    <i class="fa-solid fa-warehouse"></i>
+                    Stock
+                </a>
             </li>
-            <li><a>Orders</a></li>
+            <li>
+                <a href="{{route('orders.index')}}">
+                <i class="fa-solid fa-list-check"></i>
+                Orders
+                </a>
+            </li>
         </ul>
     </div>
     <div class="navbar-end">
         {{-- <a class="btn">UserName</a> --}}
+        <span class="me-3">
+            Username
+        </span>
         <div class="avatar avatar-online">
-            <div class="w-15 rounded-full">
+            <div class="w-10 rounded-full">
                 <img src="https://img.daisyui.com/images/profile/demo/gordon@192.webp" />
             </div>
         </div>

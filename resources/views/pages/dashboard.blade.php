@@ -12,73 +12,38 @@
     </header>
 
 
-    <h2 class="text-3xl font-bold mt-[80px] mb-5">Recent Avtivity</h2>
+    <h2 class="text-3xl font-bold mt-[80px] mb-5 text-center">Last 5 movement..</h2>
+
     <div class="overflow-x-auto">
         <table class="table table-zebra">
             <!-- head -->
             <thead>
-                <tr>
+                <tr class="bg-slate-400">
                     <th>Last modification</th>
                     <th>Name</th>
                     <th>Quantity</th>
-                    <th>Detsails</th>
+                    <th>Details</th>
                 </tr>
             </thead>
             <tbody>
 
-                <tr>
-                    <th>23 gen 2025 - 10.30</th>
-                    <td>Braccio Console</td>
-                    <td>12</td>
-                    <td>
-                        <a href="">
-                            <i class="fa-solid fa-circle-info me-3 text-2xl text-blue-400"></i>
-                            <span>info</span>
-                        </a>
-                    </td>
-                <tr>
-                    <th>23 gen 2025 - 10.30</th>
-                    <td>Braccio Console</td>
-                    <td>12</td>
-                    <td>
-                        <a href="">
-                            <i class="fa-solid fa-circle-info me-3 text-2xl text-blue-400"></i>
-                            <span>info</span>
-                        </a>
-                    </td>
-                <tr>
-                    <th>23 gen 2025 - 10.30</th>
-                    <td>Braccio Console</td>
-                    <td>12</td>
-                    <td>
-                        <a href="">
-                            <i class="fa-solid fa-circle-info me-3 text-2xl text-blue-400"></i>
-                            <span>info</span>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>23 gen 2025 - 10.30</th>
-                    <td>Braccio Console</td>
-                    <td>12</td>
-                    <td>
-                        <a href="">
-                            <i class="fa-solid fa-circle-info me-3 text-2xl text-blue-400"></i>
-                            <span>info</span>
-                        </a>
-                    </td>
-                </tr>
-                <tr>
-                    <th>23 gen 2025 - 10.30</th>
-                    <td>Braccio Console</td>
-                    <td>12</td>
-                    <td>
-                        <a href="">
-                            <i class="fa-solid fa-circle-info me-3 text-2xl text-blue-400"></i>
-                            <span>info</span>
-                        </a>
-                    </td>
-                </tr>
+                @forelse ($last_movement as $item)
+                    <tr>
+                        <th>{{$item->updated_at}}</th>
+                        <td>{{$item->name}}</td>
+                        <td>{{$item->quantity}}</td>
+                        <td>
+                            <a href="{{route('stock.show', compact('item'))}}" class="btn btn-sm border-none text-white bg-sky-500">
+                                <i class="fa-solid fa-circle-info me-1 text-lg"></i>
+                                <span>info</span>
+                            </a>
+                        </td>
+                    </tr>
+                @empty
+                    <tr>
+                        <td colspan="100%" class="text-red-500">No Item insert</td>
+                    </tr>
+                @endforelse
 
             </tbody>
         </table>

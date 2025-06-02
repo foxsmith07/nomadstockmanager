@@ -13,11 +13,13 @@
 
     </style>
 </head>
-<body class=" bg-slate-100">
-    <x-navbar/>
+<body class=" bg-slate-300">
+    <x-navbar />
 
-    <div class="p-5 min-h-screen">
-        <div class="mt-[80px]"></div>
+    <div class="{{Route::currentRouteName() == 'stock.index' ? '' : 'p-5'}} min-h-screen">
+        {{-- @if (Route::currentRouteName() != 'stock.index')
+        <div class="mt-[70px]"></div>            
+        @endif --}}
         {{$slot}}
     </div>
 
