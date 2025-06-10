@@ -2,5 +2,10 @@
 
 - scaffholding
 - daisyui
-- Fontawesome# nomadstockmanager
-# nomadstockmanager
+- Fontawesome
+- livewire
+
+
+
+**main color**
+#ff5e48

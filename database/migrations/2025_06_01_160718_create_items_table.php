@@ -15,10 +15,14 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->longText('description');
-            $table->integer('quantity');
+            $table->integer('quantity_stock');
             $table->string('position');
-            $table->boolean('ordered')->default(false);
-            $table->boolean('shipped')->default(false);
+            $table->integer('quantity_ordered')->default(0);
+            $table->timestamp('data_ordered')->nullable();
+            $table->integer('quantity_shipped')->default(0);
+            $table->timestamp('data_shipped')->nullable();
+            // $table->boolean('ordered')->default(false);
+            // $table->boolean('shipped')->default(false);
             $table->timestamps();
         });
     }
