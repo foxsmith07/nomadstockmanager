@@ -6,8 +6,8 @@
                 <img src="{{asset('asset/warehouse.jpg')}}" alt="warehouse" class="w-full" />
             </figure>
             <div class="card-body">
-                <h1 class="card-title title2" style="font-size: 100px; padding: 0; margin: 0;">Stock</h1>
-                <p class="text-xl title2">All items in our stock</p>
+                <h1 class="card-title title2 text-[#ff5e48]" style="font-size: 100px; padding: 0; margin: 0;">Nola Warehouse</h1>
+                <p class="text-xl title2">All items in Nola Office</p>
             </div>
         </div>
     </div>

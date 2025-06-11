@@ -43,12 +43,12 @@
                     Stock
                 </a>
             </li>
-            <li>
+            {{-- <li>
                 <a href="{{ route('orders.index') }}" class="{{Route::CurrentRouteName() == 'orders.index' ? ' text-orange-700 font-semibold' : ''}} active:bg-[#ff5e48]! active:text-white! rounded-full">
-                    {{-- <i class="fa-solid fa-list-check"></i> --}}
+                    <i class="fa-solid fa-list-check"></i>
                     Orders
                 </a>
-            </li>
+            </li> --}}
         </ul>
     </div>
     <div class="navbar-end">
