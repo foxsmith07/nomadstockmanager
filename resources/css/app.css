@@ -37,3 +37,10 @@ h1 {
     margin-bottom: 40px;
 }
 
+
+input , textarea {
+    @apply bg-white rounded-md p-3 outline-1 outline-slate-200
+
+    hover:outline-[#ff5e48]
+    focus:outline-[#ff5e48] focus:outline-2
+}

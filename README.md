@@ -4,6 +4,7 @@
 - daisyui
 - Fontawesome
 - livewire
+- sweetAlert2
 
 
 

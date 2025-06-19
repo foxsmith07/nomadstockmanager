@@ -18,6 +18,7 @@
 </head>
 
 <body class=" bg-slate-50">
+    @include('sweetalert2::index')
     <x-navbar />
 
     <div class="{{ Route::currentRouteName() == 'stock.index' ? '' : 'p-5' }} min-h-screen">
